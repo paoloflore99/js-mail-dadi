@@ -1,8 +1,19 @@
+console.log ("florep1999@gmail.com","paoloflore937@gmail.com","marco2000@gmail.com","dario190@gmail.com","vincenzoo10@gmail.com");
 
+const listaAccesso = ["florep1999@gmail.com","paoloflore937@gmail.com","marco2000@gmail.com","dario190@gmail.com","vincenzoo10@gmail.com"];
 
-const email = ["florep1999@gmail.com","paoloflore937@gmail.com","marco2000@gmail.com","dario190@gmail.com","vincenzoo10@gmail.com"];
+const controlloBtn = document.getElementById("controlloBtn");
+const risultato = document.getElementById("risultato");
 
-console.log(email);   //per vederlo in console
+controlloBtn.addEventListener("click", function() {
+    const emailInput = document.getElementById("emailInput");
+    const email = emailInput.value;
 
-console.log("faccia cosi per vederlo in console",  email[0])
- 
+    if (listaAccesso.includes(email)) {
+        risultato.textContent = "Accesso consentito";
+        risultato.style.color = "green";
+    } else {
+        risultato.textContent = "Accesso negato";
+        risultato.style.color = "red";   //qui modifico direttamente il css
+    }
+});

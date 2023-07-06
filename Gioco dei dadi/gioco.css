@@ -6,3 +6,8 @@
     border: 1px solid black;
     min-height: 700px;
 }
+
+.dadoUtente,
+.dadoPC  {
+    width: 50px;
+}
